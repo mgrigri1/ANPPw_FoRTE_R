@@ -15,10 +15,10 @@ dbl_band_2020 <- read.csv("data/DBL_dendrobands_2020.csv", na.strings = c("", "N
 dbl_band_2020 <-  filter(dbl_band_2020, date != "2019-08-07", date != "2019-08-08")
 
 # get rid of unwanted columns 
-dbl_band_2019 <- dbl_band_2019[c("tag", "species", "fate", "bottom..in.", "top",
+dbl_band_2019 <- dbl_band_2019[c("tag", "species", "bottom..in.", "top",
                                  "date", "notes")]
 
-dbl_band_2020 <- dbl_band_2020[c("tag", "species", "fate", "bottom..in.", "top",
+dbl_band_2020 <- dbl_band_2020[c("tag", "species", "bottom..in.", "top",
                                  "date", "notes")]
 
 # change the bottom and top band column names 
@@ -40,8 +40,8 @@ dbl_band_2020 <- arrange(dbl_band_2020, tag)
 # upload to google drive 
 
 # write the csv
-write.csv(dbl_band_2019, "data/fd_double_dendroband_2019.csv", row.names = FALSE)
-write.csv(dbl_band_2020, "data/fd_double_dendroband_2020.csv", row.names = FALSE)
+write.csv(dbl_band_2019, "data/fd_double_dendroband_2019.csv", row.names = FALSE, quote = FALSE)
+write.csv(dbl_band_2020, "data/fd_double_dendroband_2020.csv", row.names = FALSE, quote = FALSE)
 
 # find the folder pathway on mydrive 
 x <- drive_find(type = "folder", pattern = "canopy_dendroband", n_max = 6)
