@@ -1,13 +1,9 @@
 # this script is an ingestion script for the subcanopy diameter data, and the 
 # the subcanopy stem counts.
 
-# In the bottom half of this script, I take the seedling_sapling_2019.csv and change
-# the format to match the 2020 data. the 2019 data did not need the 0.5cm adjustment. 
-
 library(dplyr)
 library(fortedata)
 library(googledrive)
-
 
 # Bring in the subcanopy csv's and make the format matching. Then upload them to 
 # google drive
@@ -32,13 +28,13 @@ sc_2020_id <- file_id[[1,2]]
 drive_download(
   as_id(sc_2019_id), 
   path = "data/gd_subcanopy_D.csv",
-  overwrite = FALSE)
+  overwrite = TRUE)
 
 # and tnow the 2020
 drive_download(
   as_id(sc_2020_id), 
   path = "data/gd_subcanopy_D_2020.csv",
-  overwrite = FALSE)
+  overwrite = TRUE)
 
 # This brings in the data from my local machine
 sc_2019 <- read.csv("data/gd_subcanopy_D.csv", na.strings = c("", "NA"))

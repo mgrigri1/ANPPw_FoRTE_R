@@ -48,7 +48,8 @@ y <- x[[1,2]]
 drive_upload(
   "data/fd_seedling_sapling_2020.csv",
   name = "fd_seedling_sapling_2020",
-  path = as_id(y)
+  path = as_id(y),
+  overwrite = TRUE
 )
 
 ###################################################################################
@@ -72,5 +73,6 @@ write.csv(ss_2019, "data/fd_seedling_sapling_2019.csv", row.names = FALSE)
 drive_upload(
   "data/fd_seedling_sapling_2019.csv",
   name = "fd_seedling_sapling_2019",
-  path = as_id(y)
+  path = as_id(y),
+  overwrite = TRUE
 )
