@@ -103,7 +103,7 @@ seedling_comp <- aug_seedlings %>%
   mutate(percent = n/total) %>% 
   arrange(replicate, percent)
 
-# calcualate stem density per hectare 
+# calcualate seedling stem density per hectare 
 
 seedling_density <- june_seedlings %>% 
   group_by(subplot, uniqueID) %>% 

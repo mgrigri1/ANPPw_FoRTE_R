@@ -1,7 +1,9 @@
-# This script take the data fro mthe double or dual bands that were put up in June 
+# This script takes the data fro mthe double or dual bands that were put up in June 
 # 2019 and compares the growth increments between top and bottom bands across species.
 # It runs t-tests to compare top and bottom bands within species, and the compares 
-# the differences in the taper between live and dead tress of each species
+# the differences in the taper between live and dead trees of each species. When 
+# examining the 2019 data, I filter out the first week of measurements to give the bands
+# time to settle on the stem. Future years will not need this nuance. 
 
 # load packages 
 library(dplyr)

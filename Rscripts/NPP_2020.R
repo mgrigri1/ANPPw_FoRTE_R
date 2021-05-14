@@ -19,8 +19,8 @@ library(ggpubr)
 library(lubridate)
 
 # use source to run subcanopy scripts 
-# source("scripts/subcanopy.R")
-# source("scripts/seedling_saplings.R")
+# source("Rscripts/subcanopy.R")
+# source("Rscripts/seedling_saplings.R")
 
 #importing csv *********ADD NEW DATA HERE
 dendro_2019 <- read.csv("data/canopy_dendrobands_2019.csv", na.strings = c("", "NA"))
